@@ -1,1 +1,0 @@
-﻿const admin=require('firebase-admin');module.exports={initAdmin:function(){if(!admin.apps.length){const j=JSON.parse(Buffer.from(process.env.SERVICE_ACCOUNT_BASE64,'base64').toString());admin.initializeApp({credential:admin.credential.cert(j)});}return admin.app();}};
